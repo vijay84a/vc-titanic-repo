@@ -3,8 +3,9 @@ name: CD Pipeline
 # Only trigger, when the build workflow succeeded i.e. CI Pipeline
 on:
   workflow_run:
-    workflows:
+    workflows: ["CI Pipeline"]
     types:
+      - completed
 
 jobs:
   deploy:
